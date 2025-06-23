@@ -37,7 +37,6 @@ const MyBookmark = () => {
   };
 
     useEffect(() => {
-    //   console.log("Loaded token in MyBookmarks.jsx:", token);
     if (token) {
         fetchBookmarks();
     }

@@ -2,7 +2,6 @@ import jwt from 'jsonwebtoken';
 
 const optionalAuthMiddleware = (req, res, next) => {
   const authHeader = req.headers['authorization'];
-  // console.log('JWT_SECRET from env during optionalAuth:',process.env.JWT_SECRET)
   if (authHeader && authHeader.startsWith('Bearer ')) {
     const token = authHeader.split(' ')[1];
     

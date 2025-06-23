@@ -4,8 +4,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  // const [token, setToken] = useState(localStorage.getItem('token') || null);
-  
+
   const [token, setToken] = useState(null);
 
     useEffect(() => {
@@ -21,7 +20,6 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem('token');
-    // navigate('/'); useNavigate() may be used only in the context of a <Router> component.
     setToken(null);
   };
 

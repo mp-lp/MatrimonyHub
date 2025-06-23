@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useAuth } from '../context/AuthContext';
 
 const Register = () => {
   const [form, setForm] = useState({ email: '', phone: '', password: '' });
   const [error, setError] = useState('');
   const navigate = useNavigate();
+   const { login } = useAuth();
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -14,7 +16,8 @@ const Register = () => {
     try {
       const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/register`, form);
       if (res.data.token) {
-        localStorage.setItem('token', res.data.token);
+        // localStorage.setItem('token', res.data.token);
+        login(res.data.token);
         navigate('/');
       } else {
         setError(res.data.message || 'Registration failed');

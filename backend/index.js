@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
-// console.log('JWT_SECRET from env:', process.env.JWT_SECRET);
+
 
 import express from 'express';
 import mongoose from 'mongoose';
@@ -13,15 +13,13 @@ import searchRoutes from './routes/searchRoutes.js';
 
 import { connectCloudinary } from './utils/cloudinary.js'; 
 
-
-
 const app = express();
-// console.log(process.env.CLOUDINARY_API_KEY)
+
 console.log
 connectCloudinary()
 app.use(cors({
-  origin: ['https://matrimony-hub-bts2.vercel.app'], // allow your frontend
-  credentials: true               // allow cookies/auth headers if needed
+  origin: ['https://matrimony-hub-bts2.vercel.app'], 
+  credentials: true             
 }));
 
 app.use(express.json());

@@ -56,23 +56,7 @@ const getMyProfile = async (req, res) => {
   }
 };
 
-//get profile by profile Id
-// const getProfileById = async (req, res) => {
-//   try {
-//     const profileId = req.params.id;
-//     console.log(profileId)
-//     const profile = await Profile.findById(profileId).populate('userId', 'email');
 
-
-//     if (!profile) {
-//       return res.status(404).json({ success: false, message: "Profile not found" });
-//     }
-
-//     res.json({ success: true, profile });
-//   } catch (error) {
-//     res.status(500).json({ success: false, message: error.message });
-//   }
-// };
 
 const getProfileById = async (req, res) => {
   try {
@@ -109,7 +93,7 @@ const getProfileById = async (req, res) => {
 //GET all profiles 
 const getAllProfiles = async (req, res) => {
   try {
-    const currentUserId = req.user?.userId; // retrieved from authMiddleware if token is passed
+    const currentUserId = req.user?.userId; 
 
     const query = currentUserId
       ? { userId: { $ne: currentUserId } } // Exclude logged-in user's profile

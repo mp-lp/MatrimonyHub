@@ -9,8 +9,8 @@ const Navbar = () => {
   const toggleMobileMenu = () => setIsMobileOpen(!isMobileOpen);
   const handleLogout = () => {
     navigate('/');  
-    logout();           // Clear token and auth state
-          // Redirect to home
+    logout();           
+         
   };
   useEffect(() => {
   if (!token) {

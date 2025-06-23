@@ -12,7 +12,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Message Sent:", form);
-    // Optionally send data to your backend here
+   
     alert("Your message has been sent!");
     setForm({ name: '', email: '', message: '' });
   };

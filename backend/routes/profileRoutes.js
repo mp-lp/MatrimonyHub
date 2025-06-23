@@ -17,8 +17,7 @@ router.post(
   createOrUpdateProfile
 );
 router.get('/me', authMiddleware, getMyProfile); 
-router.get('/all', optionalAuthMiddleware, getAllProfiles); 
-// router.get('/:id', getProfileById);   
+router.get('/all', optionalAuthMiddleware, getAllProfiles);  
 router.get('/:id', optionalAuthMiddleware, getProfileById);
 
 

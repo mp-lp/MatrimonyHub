@@ -18,16 +18,7 @@ const PublicProfile = () => {
 
 
   useEffect(() => {
-    // const fetchProfile = async () => {
-    //   try {
-    //     const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/profile/${id}`);
-    //     if (res.data.success) setProfile(res.data.profile);
-    //   } catch (err) {
-    //     console.error('Error loading profile:', err.message);
-    //   } finally {
-    //     setLoading(false);
-    //   }
-    // };
+
     const fetchProfile = async () => {
   try {
     const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/profile/${id}`, {
