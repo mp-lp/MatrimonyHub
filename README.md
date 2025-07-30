@@ -50,7 +50,7 @@ A full-stack web application for browsing, bookmarking, and filtering matrimonia
 
 ```bash
 git clone https://github.com/mp-lp/MatrimonyHub.git
-cd matrimonial-app
+cd MatrimonyHub
 ```
 ---
 
