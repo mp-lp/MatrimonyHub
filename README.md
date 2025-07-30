@@ -1,4 +1,4 @@
-# 💍 Shaadisphere - Matrimonial Profile Search App
+# 💍 MatrimonyHub - Matrimonial Profile Search App
 
 A full-stack web application for browsing, bookmarking, and filtering matrimonial profiles. Built with **React**, **Node.js**, **Express**, and **MongoDB**.
 
